@@ -1,0 +1,35 @@
+<div id="content">
+    <!-- begin post -->
+    <div class="post" *ngFor="let results of results">
+      <!-- <div class="thumb"><a href="#"><img src="images/_thumb1.jpg" alt="" /></a></div> -->
+      <h2><a href="#">{{results.title}}</a></h2>
+      <p class="date">{{jstoday}}</p>
+      <p>{{results.snippet}}</p>
+      <a class="continue" style="cursor: pointer;" (click)="result(results)">Continue Reading</a>
+     </div>
+  
+    <!-- begin post navigation -->
+
+    <!-- end post navigation -->
+  </div>
+
+<h4 style="margin-left: 38px; margin-top: 10px;">Latest News</h4>
+  <div id="content">
+    <!-- begin post -->
+    <div class="post" *ngFor="let s of englishNews" >
+      <div class="thumb"><a href="#"><img src="{{s.urlToImage}}" alt="" /></a></div>
+      <h2><a href="#">{{s.title}}</a></h2>
+      <p class="date">{{s.publishedAt}}</p>
+      <p>{{s.description}}</p>
+      <a class="continue" style="cursor: pointer;" (click)="checknews(s)">Continue Reading</a>
+     </div>
+  
+    <!-- begin post navigation -->
+    <button style="    background: aliceblue;
+    height: 35px;
+    width: 100%;cursor: pointer;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 100px;" class="btn btn-danger" (click)="viewMore()">view More</button>
+    <!-- end post navigation -->
+  </div>
