@@ -118,8 +118,17 @@
               "devServerTarget": "BreakNews:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/BreakNews",
+            "netlifyToken": "a5fb35e899ac61c3d21539f6f041689d7edf4ff9c69790c61b06dc3b87eab347",
+            "siteId": "5e72e804-efc6-45eb-8a1a-82601024c6cc"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "BreakNews"
 }
